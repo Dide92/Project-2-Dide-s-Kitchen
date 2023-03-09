@@ -19,8 +19,8 @@ app.use(express.static('public'))
 
 //Routes
  //Index
- app.get('/dideskitchen', (req, res) => {
-    res.send('hello world')
+ app.get('/', (req, res) => {
+    res.render('index.ejs')
  })
 
 
