@@ -1,27 +1,32 @@
-
+require("dotenv").config()
 const express= require('express')
 const app = express()
-// const methodOverride = require('method-override')
+const methodOverride = require('method-override')
 
 const PORT = process.env.PORT || 9009
-require('dotenv').config();
-// const Food = require('./models/food.js')
-// const foodsController = require('./controllers/foods.js')
+const Food = require('./models/food.js')
+const foodsController = require('./controllers/foods.js')
+
+
+const mongoose = require('mongoose')
+
+//Mongodb Atlas Connection
+mongoose.connect(process.env.DATABASE_URL)
+
+const db = mongoose.connection
+db.on('error', (error) => console.log(error.message + ' is Mongo not running?'))
+db.on('connected', () => console.log(' Mongo is connected'))
+db.on('disconnected', () => console.log(' Mongo is disconnected'))
 
 
 //Middleware
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
-// app.use(methodOverride('_method'))
+app.use(methodOverride('_method'))
+app.use('/dideskitchen', foodsController)
 app.use(express.static('public'))
-// app.use('/dideskitchen', foodsController)
 
 
-//Routes
- //Index
- app.get('/', (req, res) => {
-    res.render('index.ejs')
- })
 
 
 //port

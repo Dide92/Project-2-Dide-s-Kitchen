@@ -1,15 +1,12 @@
-// const express = require('express')
-// const router = express.Router()
-// // const Food = require ('../models/food.js')
+const express = require('express')
+const router = express.Router()
+const Food = require ('../models/food.js')
 
-//  //Routes
-//  //Index
-//  router.get('/', (req, res) => {
-//     res.send('Hello world')
-//  })
-
-
+//routes
+ //Index
+ router.get('/', (req, res) => {
+    res.render('index.ejs')
+ })
 
 
-
-// module.exports = router
+module.exports = router
