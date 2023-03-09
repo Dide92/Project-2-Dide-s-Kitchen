@@ -7,6 +7,10 @@ const Food = require ('../models/food.js')
  router.get('/', (req, res) => {
     res.render('index.ejs')
  })
+ //New
+router.get('/new', (req, res) => {
+   res.render('new.ejs')
+})
 
 
 module.exports = router
