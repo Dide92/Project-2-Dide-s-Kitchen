@@ -17,6 +17,12 @@ router.get('/about', (req, res) => {
    res.render('about.ejs')
 })
 
+//My Recipe Page
+router.get('/myrecipe', (req, res) => {
+   res.render('myRecipe.ejs')
+})
+
+
  //New
 router.get('/new', (req, res) => {
    res.render('new.ejs')
