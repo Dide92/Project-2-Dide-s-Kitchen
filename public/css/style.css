@@ -82,3 +82,12 @@ i {
     position:relative;
     left: 100%;
 }
+.dide {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    padding-bottom: 10px;
+}
+.enjoy{
+    font-style: italic;
+}
