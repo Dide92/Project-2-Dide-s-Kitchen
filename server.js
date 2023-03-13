@@ -23,7 +23,7 @@ db.on('disconnected', () => console.log(' Mongo is disconnected'))
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(methodOverride('_method'))
-app.use('/dideskitchen', foodsController)
+app.use('/dideskitchen/', foodsController)
 app.use(express.static('public'))
 
 

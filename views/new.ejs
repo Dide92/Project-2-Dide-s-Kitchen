@@ -1,7 +1,7 @@
 <%- include("partials/header") %>
 <div class="container">
     <img class="bake" src="../img/dideskitchen.png"></img>
-    <form action="/dideskitchen/recipes" method="POST">
+    <form action="/dideskitchen/guestrecipes" method="POST">
         <label for="recipe">Recipe Name:</label>
         <input type="text" name="recipe" id="recipe" placeholder="Recipe Name"/><br><br>
         <label for="recipeBy">Recipe By:</label>
@@ -20,7 +20,7 @@
         <textarea rows="5" cols="33"></textarea><br><br>
         <label for="directions">Directions:</label>
         <textarea rows="10" cols="60"></textarea><br><br>
-        <input type="submit" value="Submit Recipe"/>
+        <input type="submit" value="Submit Recipe" id="add"/>
     </form>
 
 </div>

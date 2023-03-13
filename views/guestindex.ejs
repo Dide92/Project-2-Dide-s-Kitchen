@@ -1,0 +1,16 @@
+<%- include("partials/header") %>
+<div class="container">
+    <img class="bake" src="../img/dideskitchen.png"></img>
+    <h2 class="guestrecipes">Guest Recipes</h2><br>
+    <ul>
+        <% for(let i=0; i < foods.length; i++) { %>
+            <li>
+                <a href="/dideskitchen/guestrecipes/<%=foods[i].id; %>">
+                    <%=foods[i].recipeName; %>
+                </a><br>
+            </li>
+        <% } %>
+    </ul>
+
+</div>
+<%- include("partials/footer") %>
