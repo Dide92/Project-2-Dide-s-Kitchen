@@ -2,6 +2,21 @@
 <div class="container">
     <img class="bake" src="../img/dideskitchen.png"></img>
     <h1>Guest Recipes Show Page</h1>
-    
+    <h2><%= food.recipeName %></h2>
+    <p><%= food.recipeBy %></p>
+    <p><%= food.category %></p>
+    <p><%= food.ingredients %></p>
+    <p><%= food.description %></p>
+    <img class='guestimg' src="<%= food.image %>">
+    <nav>
+        <a href="/dideskitchen/guestrecipes">Back to Guest Recipes</a>
+    </nav>
+    <a href="/dideskitchen/guestrecipes/<%=food.id%>/edit">Edit Recipe</a>
+
+    <form action="/dideskitchen/guestrecipes/<%=food.id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete" id="delete">
+    </form>
+
+
 </div>
 <%- include("partials/footer") %>

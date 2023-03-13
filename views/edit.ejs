@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+<div class="container">
+    <img class="bake" src="../img/dideskitchen.png"></img>
+    <h1>Guest Recipes Edit Page</h1>
+    <form action="/dideskitchen/guestrecipes/<%=food.id%>?_method=PUT" method="POST">
+        <label for="recipe">Recipe Name:</label>
+        <input type="text" name="recipe" id="recipe" placeholder="Recipe Name"/><br><br>
+        <label for="recipeBy">Recipe By:</label>
+        <input type="text" name="recipeBy" id="recipeBy" placeholder="Recipe By"/><br><br>
+        <label for="category">Category:</label>
+        <select name="category" id="category">
+        <option value="soup">soup</option>
+        <option value="salad">salad</option>
+        <option value="dinner">dinner</option>
+        <option value="breakfast">breakfast</option>
+        <option value="dessert">dessert</option>
+        <option value="bakery">bakery</option></select>
+        <label for="image">Image:</label>
+        <input type="text" name="image" id="image" placeholder="Image"/><br><br>
+        <label for="ingredients">Ingredients:</label>
+        <textarea rows="5" cols="33"></textarea><br><br>
+        <label for="directions">Directions:</label>
+        <textarea rows="10" cols="60"></textarea><br><br>
+        <input type="submit" value="Edit Recipe" id="edit"/>
+    </form>
+
+</div>
+<%- include("partials/footer") %>
