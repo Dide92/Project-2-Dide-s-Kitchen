@@ -10,14 +10,26 @@ const Food = require ('../models/food.js')
  })
 
 //guestIndex
+// router.get('/guestrecipes', (req, res) => {
+//    Food.find({}, (err, foundFood)=> {
+//       if(err) {console.log(err.message)}
+//     res.render('guestindex.ejs', {
+//       foods:foundFood
+//     })
+//  })
+// })
+
+
 router.get('/guestrecipes', (req, res) => {
-   Food.find({}, (err, foundFood)=> {
-      if(err) {console.log(err.message)}
-    res.render('guestindex.ejs', {
-      foods:foundFood
-    })
- })
-})
+   Food.find({}, (error, foundFoods) => {
+     if (error) {
+       console.log(error);
+     } else {
+       res.render('guestindex.ejs', {foods: foundFoods});
+     }
+   });
+ });
+ 
 //About Me Page
 router.get('/about', (req, res) => {
    res.render('about.ejs')
@@ -62,7 +74,7 @@ router.get('/seed', (req, res) => {
 
 //Create new item
 router.post('/guestrecipes', (req, res) => {
-  Food.create(req.body.params, (error, createdFood) => {
+  Food.create(req.body, (error, createdFood) => {
        console.log(error, "THIS IS THE ERROR")
        console.log(createdFood)
        res.redirect('/dideskitchen/guestrecipes')

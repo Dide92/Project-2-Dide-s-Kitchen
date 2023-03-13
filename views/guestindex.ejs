@@ -4,11 +4,12 @@
     <h2 class="guestrecipes">Guest Recipes</h2><br>
     <ul>
         <% for(let i=0; i < foods.length; i++) { %>
-            <li>
-                <a href="/dideskitchen/guestrecipes/<%=foods[i].id; %>">
-                    <%=foods[i].recipeName; %>
-                </a><br>
-            </li>
+    <h2><%= foods[i].recipeName %></h2>
+    <p><%= foods[i].recipeBy %></p>
+    <p><%= foods[i].category %></p>
+    <p><%= foods[i].ingredients %></p>
+    <p><%= foods[i].description %></p>
+    <img src="<%= foods[i].image %>">
         <% } %>
     </ul>
 
