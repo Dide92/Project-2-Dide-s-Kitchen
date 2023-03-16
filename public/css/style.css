@@ -87,7 +87,7 @@ i {
 .enjoy{
     font-style: italic;
 }
-.olive {
+.ingredients {
     display:block;
     list-style-type:circle;
     text-align: left;
@@ -159,6 +159,14 @@ input {
    margin-left:70px;
    padding-top:20px;
    margin-bottom:-40px;
+}
+.myimg {
+    height:210px;
+    width:200px;
+    position:relative;
+    float:center;
+    z-index:-1;
+    border-radius: 10%;
 }
 
 
