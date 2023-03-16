@@ -7,11 +7,9 @@
 <a href='/dideskitchen/guestrecipes/<%=foods[i].id%>'>
     <h2><%= foods[i].recipeName %></h2>
 </a>
-    <p><%= foods[i].recipeBy %></p>
-    <p><%= foods[i].category %></p>
-    <p><%= foods[i].ingredients %></p>
-    <p><%= foods[i].description %></p>
+    <p>Recipe By: <%= foods[i].recipeBy %></p>
     <img class='guestimg' src="<%= foods[i].image %>">
+    <p>Category: <%= foods[i].category %></p>
         <% } %>
     </ul>
 

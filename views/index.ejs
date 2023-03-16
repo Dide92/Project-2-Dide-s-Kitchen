@@ -1,14 +1,44 @@
 <%- include("partials/header") %>
 <div class="container">
     <img class="bake" src="../img/dideskitchen.png"></img>
-<ul>
-    <li><button><a href='/dideskitchen/MyRecipes#soup'>Soup</a></button></li>
-    <li><button><a href='/dideskitchen/MyRecipes#salad'>Salad</a></button></li>
-    <li><button><a href='/dideskitchen/MyRecipes#breakfast'>Breakfast</a></button></li>
-    <li><button><a href='/dideskitchen/MyRecipes#dinner'>Dinner</a></button></li>
-    <li><button><a href='/dideskitchen/MyRecipes#dessert'>Dessert</a></button></li>
-    <li><button><a href='/dideskitchen/MyRecipes#bakery'>Bakery</a></button></li>
+<ul class="cat">
+    <li><a class="subcategory" href='/dideskitchen/MyRecipes#soup'>Soup</a></li>
+    <li><a class="subcategory" href='/dideskitchen/MyRecipes#salad'>Salad</a></li>
+    <li><a class="subcategory" href='/dideskitchen/MyRecipes#breakfast'>Breakfast</a></li>
+    <li><a class="subcategory" href='/dideskitchen/MyRecipes#dinner'>Dinner</a></li>
+    <li><a class="subcategory" href='/dideskitchen/MyRecipes#dessert'>Dessert</a></li>
+    <li><a class="subcategory" href='/dideskitchen/MyRecipes#bakery'>Bakery</a></li>
 </ul>
+<p class="travel" style="opacity: 0.8;">I travel for <em>food!</em></p>
+
+<div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3 py-4">
+    <div class="category__img shadow">
+        <img src="../img/kuppi.jpg" loading="'lazy">
+    </div>
+    <div class="category__img shadow">
+        <img src="../img/lemoncake.jpg" loading="'lazy">
+    </div>
+    <div class="category__img shadow">
+        <img src="../img/lavendercoffee.jpg" loading="'lazy">
+
+    </div>
+    <div class="category__img shadow">
+        <img src="../img/lavendercoffee.jpg" loading="'lazy">
+    </div>
+    <div class="category__img shadow">
+        <img src="../img/lavendercoffee.jpg" loading="'lazy">
+    </div>
+    <div class="category__img shadow">
+        <img src="../img/lavendercoffee.jpg" loading="'lazy">
+    </div>
+    <div class="category__img shadow">
+        <img src="../img/lavendercoffee.jpg" loading="'lazy">
+    </div>
+    <div class="category__img shadow">
+        <img src="../img/lavendercoffee.jpg" loading="'lazy">
+    </div>
+
+</div>
 </div>
     
 <%- include("partials/footer") %>
