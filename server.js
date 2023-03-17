@@ -3,7 +3,7 @@ const express= require('express')
 const app = express()
 const methodOverride = require('method-override')
 
-const PORT = process.env.PORT || 9009
+const PORT = process.env.PORT || 9007
 const Food = require('./models/food.js')
 const foodsController = require('./controllers/foods.js')
 
