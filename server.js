@@ -11,7 +11,11 @@ const foodsController = require('./controllers/foods.js')
 const mongoose = require('mongoose')
 
 //Mongodb Atlas Connection
-mongoose.connect(process.env.DATABASE_URL)
+const MONGODB_URI = process.env.MONGODB_URI;
+mongoose.set('strictQuery', true);
+mongoose.connect(MONGODB_URI, {
+    useNewUrlParser: false,
+})
 
 const db = mongoose.connection
 db.on('error', (error) => console.log(error.message + ' is Mongo not running?'))
