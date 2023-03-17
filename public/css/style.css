@@ -33,7 +33,7 @@ body{
     color:bisque;
 }
 .nav-link:hover {
-    color:orange;
+    color:rgba(251,177,104,255);
     font-size: 20px;
 }
 .logo {
@@ -103,7 +103,7 @@ i {
     margin-top: -20px;
     display:block;
     padding:15px;
-    font-family:Georgia, 'Times New Roman', Times, serif
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .cat{
     padding-top:10px;
@@ -169,5 +169,48 @@ input {
     border-radius: 10%;
 }
 
+.guestrecipes {
+    margin-top: -30px;
+}
+h3 {
+    color:rgba(60,44,50,255);
+    font-family:Georgia, 'Times New Roman', Times, serif;
 
- 
+}
+h2 {
+    color:rgba(60,44,50,255);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+h5 {
+    color:rgba(60,44,50,255);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+form {
+    color:rgba(60,44,50,255);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:17px;
+}
+#add {
+        color: white;
+        border:2px solid rgba(251,177,104,255);
+        background-color:rgba(251,177,104,255);
+        border-radius: 8%;
+}
+#add:hover {
+        background-color:rgba(60,44,50,255);
+        border:2px solid rgba(60,44,50,255);
+}
+a {
+    color:rgba(60,44,50,255);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+
+#delete {
+    background-color:rgba(60,44,50,255);
+    border:2px solid rgba(60,44,50,255);
+    border-radius: 8%;
+    color:white;
+}

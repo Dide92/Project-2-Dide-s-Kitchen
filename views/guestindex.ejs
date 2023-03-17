@@ -3,15 +3,68 @@
     <img class="bake" src="../img/dideskitchen.png"></img>
     <h2 class="guestrecipes">Guest Recipes</h2><br>
     <ul>
+        <h3 id="soup" style="border-bottom:1px solid rgb(60, 20, 1); width:100px">Soup</h3><br>
         <% for(let i=0; i < foods.length; i++) { %>
-<a href='/dideskitchen/guestrecipes/<%=foods[i].id%>'>
-    <h2><%= foods[i].recipeName %></h2>
-</a>
-    <p>Recipe By: <%= foods[i].recipeBy %></p>
-    <img class='guestimg' src="<%= foods[i].image %>">
-    <p>Category: <%= foods[i].category %></p>
-        <% } %>
-    </ul>
+            <% if (foods[i].category === "soup") { %>
+                <a href='/dideskitchen/guestrecipes/<%=foods[i].id%>'>
+                    <h4><%= foods[i].recipeName %></h4>
+                </a>
+                <p>Recipe By: <%= foods[i].recipeBy %></p>
+                <img class="guestimg" src="<%=foods[i].image%>">
+                <% } %>
+            <% } %>
+            <h3 id="soup" style="border-bottom:1px solid rgb(60, 20, 1); width:100px">Salad</h3><br>
+            <% for(let i=0; i < foods.length; i++) { %>
+                <% if (foods[i].category === "salad") { %>
+                    <a href='/dideskitchen/guestrecipes/<%=foods[i].id%>'>
+                        <h4><%= foods[i].recipeName %></h4>
+                    </a>
+                    <p>Recipe By: <%= foods[i].recipeBy %></p>
+                    <img class="guestimg" src="<%=foods[i].image%>">
+                    <% } %>
+                <% } %>
+                <h3 id="soup" style="border-bottom:1px solid rgb(60, 20, 1); width:100px">Breakfast</h3><br>
+                <% for(let i=0; i < foods.length; i++) { %>
+                    <% if (foods[i].category === "breakfast") { %>
+                        <a href='/dideskitchen/guestrecipes/<%=foods[i].id%>'>
+                            <h4><%= foods[i].recipeName %></h4>
+                        </a>
+                        <p>Recipe By: <%= foods[i].recipeBy %></p>
+                        <img class="guestimg" src="<%=foods[i].image%>">
+                        <% } %>
+                    <% } %>
+                    <h3 id="soup" style="border-bottom:1px solid rgb(60, 20, 1); width:100px">Dinner</h3><br>
+                    <% for(let i=0; i < foods.length; i++) { %>
+                        <% if (foods[i].category === "dinner") { %>
+                            <a href='/dideskitchen/guestrecipes/<%=foods[i].id%>'>
+                                <h4><%= foods[i].recipeName %></h4>
+                            </a>
+                            <p>Recipe By: <%= foods[i].recipeBy %></p>
+                            <img class="guestimg" src="<%=foods[i].image%>">
+                            <% } %>
+                        <% } %>
+                        <h3 id="soup" style="border-bottom:1px solid rgb(60, 20, 1); width:100px">Dessert</h3><br>
+                        <% for(let i=0; i < foods.length; i++) { %>
+                            <% if (foods[i].category === "dessert") { %>
+≈                                <a href='/dideskitchen/guestrecipes/<%=foods[i].id%>'>
+                                    <h4><%= foods[i].recipeName %></h4>
+                                </a>
+                                <p>Recipe By: <%= foods[i].recipeBy %></p>
+                                <img class="guestimg" src="<%=foods[i].image%>">
+                                <% } %>
+                            <% } %>
+                            <h3 id="soup" style="border-bottom:1px solid rgb(60, 20, 1); width:100px">Bakery</h3><br>
+                            <% for(let i=0; i < foods.length; i++) { %>
+                                <% if (foods[i].category === "bakery") { %>
+                                    <a href='/dideskitchen/guestrecipes/<%=foods[i].id%>'>
+                                        <h4><%= foods[i].recipeName %></h4>
+                                    </a>
+                                    <p>Recipe By: <%= foods[i].recipeBy %></p>
+                                    <img class="guestimg" src="<%=foods[i].image%>">
+                                    <% } %>
+                                <% } %>
+        
+    </ul> 
 
 </div>
 <%- include("partials/footer") %>
