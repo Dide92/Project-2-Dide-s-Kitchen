@@ -4,7 +4,7 @@ const foodSchema = new mongoose.Schema({
     recipeBy: {type:String},
     category: {type:String, enum:['soup', 'salad', 'breakfast', 'dinner', 'dessert', 'bakery']},
     ingredients: String,
-    description: String,
+    directions: String,
     image: String
 })
 

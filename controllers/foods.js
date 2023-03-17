@@ -3,7 +3,6 @@ const router = express.Router()
 const Food = require ('../models/food.js')
 
 //routes
-
  //Index
  router.get('/', (req, res) => {
     res.render('index.ejs', {
@@ -84,7 +83,7 @@ router.post('/guestrecipes', (req, res) => {
   Food.create(req.body, (error, createdFood) => {
        console.log(error, "THIS IS THE ERROR")
        console.log(createdFood)
-       res.redirect('/dideskitchen/guestrecipes')
+       res.redirect('/dideskitchen/guestrecipes/'+createdFood.id)
   });
 });
 
@@ -101,25 +100,23 @@ router.get('/guestrecipes/:index', (req, res) => {
 //delete
 router.delete('/guestrecipes/:index', (req, res) => {
    Food.findByIdAndDelete(req.params.index, (err, deletedFood) => {
-       //will delete a document with the given id
        if (err) {
            console.log(err)
            res.send(err)
        } else {
-           //redirect to the index page
            console.log(deletedFood)
            res.redirect('/dideskitchen/guestrecipes')
        }
    })
 })
 
-router.get('/guestrecipes/:index/edit', (req, res) => {
-	Food.findById(req.params.index, (err, foundFood) => {
+//edit
+router.get('/guestrecipes/:id/edit', (req, res) => {
+	Food.findById(req.params.id, (err, foundFood) => {
 		if(err) {
 			console.log(err)
 			res.send(err)
 		} else {
-			// make the edit form show the existing data 
 			res.render('edit.ejs', {
 				food: foundFood
 			})
@@ -127,18 +124,14 @@ router.get('/guestrecipes/:index/edit', (req, res) => {
 	})
 })
 
+//update
 router.put('/guestrecipes/:id', (req, res) => {
-    Food.findByIdAndUpdate(req.params.id, req.body, { new: true, // true to return the modified document
-}, (err, updatedFood) => {
-    //findByIdAndUpdate updates a fruit with a given id
-    //the new option means we want to get the updated fruit return
-    //without this flag, we will get the fruit before it was notified
+    Food.findByIdAndUpdate(req.params.id, req.body, { new: true}, (err, updatedFood) => {
     if (err) {
         console.log(err)
         res.send(err)
     }else {
         console.log(updatedFood)
-        //redirect to the index route
         res.redirect('/dideskitchen/guestrecipes')
     }
 })

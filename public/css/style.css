@@ -214,3 +214,10 @@ a {
     border-radius: 8%;
     color:white;
 }
+
+#directions {
+    width:500px;
+}
+#ingredients {
+    width:300px;
+}

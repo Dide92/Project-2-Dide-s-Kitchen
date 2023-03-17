@@ -1,12 +1,12 @@
 <%- include("partials/header") %>
 <div class="container">
-    <img class="bake" src="../img/dideskitchen.png"></img>
+    <img class="bake" src="./img/dideskitchen.png"></img>
     <h2><%= food.recipeName %></h2>
-    <p>Recipe By: <%= food.recipeBy %></p>
+    <p><strong>Recipe By: </strong><%= food.recipeBy %></p>
     <img class='guestimg' src="<%= food.image %>">
-    <p>Category: <%= food.category %></p>
-    <p>Ingredients: <%= food.ingredients %></p>
-    <p>Description: <%= food.description %></p>
+    <p><strong>Category: </strong><%= food.category %></p>
+    <p><strong>Ingredients: </strong><%= food.ingredients %></p>
+    <p><strong>Directions: </strong><%= food.directions %></p>
     <nav>
         <a href="/dideskitchen/guestrecipes">Back to Guest Recipes</a>
     </nav>
