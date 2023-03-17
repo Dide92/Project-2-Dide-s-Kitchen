@@ -51,11 +51,10 @@ Subscribe
 
 **MVP Goals**
 > Use the seven RESTful routes that perform the CRUD operations(using Index, new, create, show edit, update and destroy routes)
-> Add a form for adding new recipes
-> Have a public folder for css and images and the proper middleware
-> Used controllers folder to organize routes
-> The seed route includes all Dide's recipes under "my recipes" tab. Under "guest recipes", user's new added recipe will be displayed.
-> Used bootstrap for css
-> Made a subscription/sign up page
-> Used header & footer partials
-> Follow us on social media links have been added and linked properly
+> Add a form for adding new recipes.
+> Have a public folder for css and images and the proper middleware.
+> Used controllers folder to organize routes.
+> Used bootstrap for css.
+> Made a subscription/sign up page.
+> Used header & footer partials.
+> Follow us on social media links have been added and linked properly.
