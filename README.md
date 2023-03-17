@@ -1,5 +1,7 @@
 # Project-2-Dide-s-Kitchen
 
+You can view my project here: [Dide's Kitchen](https://dideskitchenapp.herokuapp.com/dideskitchen)
+
 "Dide's Kitchen" - Cookbook Diary
 
 Project Description:
